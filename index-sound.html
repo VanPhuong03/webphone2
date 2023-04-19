@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>Táo sờ to-Âm thanh</title>
+</head>
+<body>
+  <header>
+    <div class="heading">
+      <div class="main-search">
+        <div class="search-box">
+          <form method="get" action="/tim-kiem" onsubmit="return submitSearch(this);" enctype="application/x-www-form-urlencoded">
+              <div class="border">
+                  <input type="text" id="search-box" name="kwd" placeholder="Hôm nay bạn cần tìm gì?" />
+                  <ion-icon style="color: aliceblue; font-size: 30px;" class="fa-solid" name="close-circle" onclick="exitSearchBox()"></ion-icon>
+              </div>
+          </form>
+        </div>
+      </div>
+        <div class="container">
+         <!--logo-->
+         <div class="menu-bar">
+          <ion-icon class="menu-open" name="menu-outline" onclick="openMenu()"></ion-icon>
+              <ion-icon style="display: none;" class="menu-close" name="close-outline"  onclick="closeMenu()"></ion-icon>
+         </div>
+         <div class="logo">
+            <a href="index.html">
+              <img src="img/taosoto.png" alt="">
+            </a>
+            <!-- <a href=""><img style="width: 200px;height: 50px;" src="logo-táo.png" alt=""></a> -->
+          </div>
+          <div class="menu">
+            <ul>
+                <li> <a href="index-iphone.html"><span>Iphone</span></a></li>
+                <li> <a href="index-ipad.html"><span>iPad</span></a></li>
+                <li> <a href="index-mac.html"><span>Mac</span></a></li>
+                <li> <a href="index-watch.html"><span>Wacth</span></a></li>
+                <li> <a href="index-sound.html"><span>Âm thanh</span></a></li>
+                <li> <a href="index-accessory.html"><span>Phụ kiện</span></a></li>
+                <li> <a href="index-service.html"><span>Dịch vụ</span></a></li>
+                <li> <a href="index-promotion.html"><span>Ưu đãi</span></a></li>
+            </ul>
+          </div>
+         <div class="header-right">
+            <!--search box-->
+            <ion-icon class="fa-solid " name="search-outline"  onclick="showSearchBox()"></ion-icon>
+         <div class="gioihang">
+            <a href="index-cart.html">
+              <ion-icon class="fa-solid fa" name="cart-outline"></ion-icon>
+            </a>
+          </div>
+          <div class="tracuu">
+            <a href="index-login.html">
+              <ion-icon class="fa-solid " name="person-add-outline"></ion-icon>
+            </a>
+            <div  class="menu-user">
+              <div class="menu-user-1">
+                <ul>
+                  <li><a href="index-user.html"> Tạo tài khoản ngay</a></li>
+                  <li><a href="index-login.html"> Đăng nhập</a></li>
+                  <li><a href="index-service.html"> Dịch vụ</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="menu-bottom">
+            <ul>
+                <li> <a href="index-iphone.html"><span>Iphone</span></a></li>
+                <li> <a href="index-ipad.html"><span>iPad</span></a></li>
+                <li> <a href="index-mac.html"><span>Mac</span></a></li>
+                <li> <a href="index-watch.html"><span>Wacth</span></a></li>
+                <li> <a href="index-sound.html"><span>Âm thanh</span></a></li>
+                <li> <a href="index-accessory.html"><span>Phụ kiện</span></a></li>
+                <!-- <li> <a href=""><span>Trả góp</span></a></li>
+                <li> <a href=""><span>Ưu đãi</span></a></li> -->
+            </ul>
+        </div>
+        <div style="display: none;" class="menu-bar-mobile">
+          <div class="menu-bar-mobile-1">
+            <ul>
+              <li><a href="index-user.html">Tạo tài khoản ngay</a></li>
+              <li><a href="index-login.html">Đăng nhập</a></li>
+              <li><a href="index-service.html">Dịch vụ</a></li>
+              <li><a href="">Ưu đãi</a></li>
+            </ul>
+          </div>
+        </div>
+    </div>
+    
+</header>
+<main >
+  <div class="page">
+      <div class="container">
+        <div class="page-exit">
+          <ul>
+            <li><a href="index.html"> Trang chủ</a></li>
+            <li><span>></span></li>
+            <li>Âm thanh</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--slider-->
+  <section class="slider">
+    <div class="container">
+      <div class="slider-content">
+        <div class="page-title">
+          <span>Âm thanh</span>
+        </div>
+          <div class="slider-content-top-container">
+              <div class="slider-content-top">
+                <a href=""><img src="banner/âm thanh.jpeg" alt=""></a>
+              </div>
+              <div class="slider-content-top-dh">
+                <ion-icon class="fa-solid fa-chevron-left" name="chevron-back-outline"></ion-icon> 
+                <ion-icon class="fa-solid fa-chevron-right" name="chevron-forward-outline"></ion-icon>
+              </div>
+            </div>
+          <div style="display: none;" class="slider-content-bottom">
+            <li class="active"> MacBook Air đẳng cấp </li>
+            <li> iPhone chơi liên quân</li>
+            <li> Một đống phụ kiện</li>
+            <li> Apple Wach xem giờ</li>
+            <li> iPad bắn free fire</li>
+          </div>
+       </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <video style="width: 100%;" src="img/large_2x.mp4" autoplay muted loop ></video>
+    </div>
+  </section>
+   <!-- ÂM THANH -->
+<section>
+    <div class="container">
+      <div class="box-home">
+        <section>
+          <div class="page-body">
+              <div class="container">
+                  <div class="sub-menu-ip">
+                      <div class="item-box-active">
+                          <div class="sub-item_ip">
+                              <a href="">Tất cả</a>
+                          </div>
+                      </div>
+                      <div class="item-box">
+                          <div class="item-box-ip">
+                              <a href="">AirPods </a>
+                          </div>
+                      </div>
+                      <div class="item-box">
+                          <div class="item-box-ip">
+                              <a href=""> EarPods</a>
+                          </div>
+                      </div>
+                      <div class="item-box">
+                          <div class="item-box-ip">
+                              <a href=""> Marshall</a>
+                          </div>
+                      </div>
+                      <div class="item-box">
+                          <div class="item-box-ip">
+                              <a href="">Beats</a>
+                          </div>
+                      </div>
+                      <div class="item-box">
+                          <div class="item-box-ip">
+                              <a href=""> JBL</a>
+                          </div>
+                      </div>
+                      <div class="item-box">
+                          <div class="item-box-ip">
+                              <a href=""> Harman Kardon</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="product-selectors">
+                      <div class="product-viewmode">
+                          <!-- <span>Sắp xếp theo</span> -->
+                          <select name="" id="">
+                              <option value="">Thứ tự hiển thị</option>
+                              <option value="">Giá từ cao đến thấp</option>
+                              <option value="">Mới nhất</option>
+                              <option value="">Tên: A đến Z</option>
+                              <option value="">Giá từ thấp đến cao</option>
+                          </select>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </section>
+        <div class="wrapper">
+          <div class="content">
+            <div class="container">
+              <div class="sub-menu-ip">
+                <div class="item-box-active">
+                    <div class="sub-item_ip">
+                        <a href="">Tất cả</a>
+                    </div>
+                </div>
+                <div class="item-box">
+                    <div class="item-box-ip">
+                        <a href="">AirPods </a>
+                    </div>
+                </div>
+                <div class="item-box">
+                    <div class="item-box-ip">
+                        <a href=""> EarPods</a>
+                    </div>
+                </div>
+                <div class="item-box">
+                    <div class="item-box-ip">
+                        <a href=""> Marshall</a>
+                    </div>
+                </div>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="product-selectors-1">
+          <div class="product-viewmode">
+              <select name="" id="">
+                  <option value="">Thứ tự hiển thị</option>
+                  <option value="">Giá từ cao đến thấp</option>
+                  <option value="">Mới nhất</option>
+                  <option value="">Tên: A đến Z</option>
+                  <option value="">Giá từ thấp đến cao</option>
+              </select>
+          </div>
+      </div>
+        <!-- <div class="header">
+          <h4><a href=""></a>IPAD</h4>
+        </div> -->
+        <div class="content-list-product">
+          <div class="item">
+            <div class="img">
+              <a href=""><img src="image/âm thanh/0001182_loa-marshall-acton-ii-bluetooth_420.png" alt=""></a>
+            </div>
+            <div class="info">
+              <div class="info-main">
+                <a href=""> Loa Marshall Acton II Bluetooth </a>
+                <span>
+                  <strong>6.190.000đ
+                </strong>
+                  <s>7.990.000₫</s>
+                 </span>
+              </div>
+              
+                 <div class="KM">
+                  <span class="bag">KM</span> <label title="Giảm tới 300.000đ khi thanh to&#225;n qua VNPAY (&#193;p dụng từ 01/04- 30/04)">Giảm tới 300.000đ khi thanh to&#225;n qu...</label>
+                      <strong class="text-orange">VÀ 8 KM KHÁC</strong>
+                 </div>
+                 <div class="promote">
+                  <ul>
+                    <li><span class="bag">KM</span> Giảm tới 300.000đ khi thanh to&#225;n qua VNPAY (&#193;p dụng từ 01/04- 30/04)</li>
+                    <li><span class="bag">KM</span> Giảm th&#234;m 1.2 Triệu khi mở thẻ TP Bank EVO th&#224;nh c&#244;ng</li>
+                    <li><span class="bag">KM</span> Thu cũ đổi mới l&#234;n đời Samsung Galaxy S23 Series: Trợ gi&#225; tới hơn 12 triệu</li>
+                    <li><span class="bag">KM</span> Dịch vụ ph&#242;ng chờ thương gia + Giảm 40% g&#243;i Bảo h&#224;nh Samsung Care+ 12 th&#225;ng gi&#225; c&#242;n 1.220.000đ</li>
+                    <li><span class="bag">KM</span> Thanh to&#225;n qua Moca tặng ngay đế sạc trị gi&#225; 320.000đ (Cho h&#243;a đơn c&#243; tổng gi&#225; trị từ 18 Triệu) - &#193;p dụng từ 01/04</li>
+                 </ul>
+                 </div>
+              </div>
+          </div>
+  
+          <div class="item">
+            <div class="img">
+              <a href=""><img src="image/âm thanh/0006052_airpods-2_420.jpeg" alt=""></a>
+            </div>
+            <div class="info">
+              <div class="info-main"> <a href=""> AirPods 2</a>
+              <span>
+                <strong>2.690.000₫
+                </strong>
+                 <s>4.390.000₫</s>
+                 </span></div>
+             
+                 <div class="KM">
+                  <span class="bag">KM</span> <label title="Giảm tới 300.000đ khi thanh to&#225;n qua VNPAY (&#193;p dụng từ 01/04- 30/04)">Giảm tới 300.000đ khi thanh to&#225;n qu...</label>
+                      <strong class="text-orange">VÀ 8 KM KHÁC</strong>
+                 </div>
+                 <div class="promote">
+                  <ul>
+                    <li><span class="bag">KM</span> Giảm tới 300.000đ khi thanh to&#225;n qua VNPAY (&#193;p dụng từ 01/04- 30/04)</li>
+                    <li><span class="bag">KM</span> Giảm th&#234;m 1.2 Triệu khi mở thẻ TP Bank EVO th&#224;nh c&#244;ng</li>
+                    <li><span class="bag">KM</span> Thu cũ đổi mới l&#234;n đời Samsung Galaxy S23 Series: Trợ gi&#225; tới hơn 12 triệu</li>
+                    <li><span class="bag">KM</span> Dịch vụ ph&#242;ng chờ thương gia + Giảm 40% g&#243;i Bảo h&#224;nh Samsung Care+ 12 th&#225;ng gi&#225; c&#242;n 1.220.000đ</li>
+                    <li><span class="bag">KM</span> Thanh to&#225;n qua Moca tặng ngay đế sạc trị gi&#225; 320.000đ (Cho h&#243;a đơn c&#243; tổng gi&#225; trị từ 18 Triệu) - &#193;p dụng từ 01/04</li>
+                    
+                 </ul>
+                 </div>
+              </div>
+          </div>
+          <div class="item">
+            <div class="img">
+              <a href=""><img src="image/âm thanh/0001183_loa-marshall-stanmore-ii-bluetooth_420.png" alt=""></a>
+            </div>
+            <div class="info">
+              <div class="info-main"><a href="">Loa Marshall Stanmore II Bluetooth</a>
+              <span>
+                <strong>6.990.000₫
+                </strong>
+                 <s>11.190.000₫</s>
+                 </span></div>
+              
+                 <div class="KM">
+                  <span class="bag">KM</span> <label title="Giảm tới 300.000đ khi thanh to&#225;n qua VNPAY (&#193;p dụng từ 01/04- 30/04)">Giảm tới 300.000đ khi thanh to&#225;n qu...</label>
+                      <strong class="text-orange">VÀ 8 KM KHÁC</strong>
+                 </div>
+                 <div class="promote">
+                  <ul>
+                    <li><span class="bag">KM</span> Giảm tới 300.000đ khi thanh to&#225;n qua VNPAY (&#193;p dụng từ 01/04- 30/04)</li>
+                    <li><span class="bag">KM</span> Giảm th&#234;m 1.2 Triệu khi mở thẻ TP Bank EVO th&#224;nh c&#244;ng</li>
+                    <li><span class="bag">KM</span> Thu cũ đổi mới l&#234;n đời Samsung Galaxy S23 Series: Trợ gi&#225; tới hơn 12 triệu</li>
+                    <li><span class="bag">KM</span> Dịch vụ ph&#242;ng chờ thương gia + Giảm 40% g&#243;i Bảo h&#224;nh Samsung Care+ 12 th&#225;ng gi&#225; c&#242;n 1.220.000đ</li>
+                    <li><span class="bag">KM</span> Thanh to&#225;n qua Moca tặng ngay đế sạc trị gi&#225; 320.000đ (Cho h&#243;a đơn c&#243; tổng gi&#225; trị từ 18 Triệu) - &#193;p dụng từ 01/04</li>
+                    
+                 </ul>
+                 </div>
+              </div>
+          </div>
+          <div class="item">
+            <div class="img">
+              <a href=""><img src="image/âm thanh/0002153_loa-jbl-go-3_420.webp" alt=""></a>
+            </div>
+            <div class="info">
+              <div class="info-main"><a href=""> Loa JBL GO 3</a>
+              <span>
+                <strong> 1.090.000₫
+                </strong>
+                 <s>1.680.000₫</s>
+                 </span></div>
+              
+                 <div class="KM">
+                  <span class="bag">KM</span> <label title="Giảm tới 300.000đ khi thanh to&#225;n qua VNPAY (&#193;p dụng từ 01/04- 30/04)">Giảm tới 300.000đ khi thanh to&#225;n qu...</label>
+                      <strong class="text-orange">VÀ 8 KM KHÁC</strong>
+                 </div>
+                 <div class="promote">
+                  <ul>
+                    <li><span class="bag">KM</span> Giảm tới 300.000đ khi thanh to&#225;n qua VNPAY (&#193;p dụng từ 01/04- 30/04)</li>
+                    <li><span class="bag">KM</span> Giảm th&#234;m 1.2 Triệu khi mở thẻ TP Bank EVO th&#224;nh c&#244;ng</li>
+                    <li><span class="bag">KM</span> Thu cũ đổi mới l&#234;n đời Samsung Galaxy S23 Series: Trợ gi&#225; tới hơn 12 triệu</li>
+                    <li><span class="bag">KM</span> Dịch vụ ph&#242;ng chờ thương gia + Giảm 40% g&#243;i Bảo h&#224;nh Samsung Care+ 12 th&#225;ng gi&#225; c&#242;n 1.220.000đ</li>
+                    <li><span class="bag">KM</span> Thanh to&#225;n qua Moca tặng ngay đế sạc trị gi&#225; 320.000đ (Cho h&#243;a đơn c&#243; tổng gi&#225; trị từ 18 Triệu) - &#193;p dụng từ 01/04</li>
+                    
+                 </ul>
+                 </div>
+              </div>
+          </div>
+          
+        </div>
+
+        <div class="content-list-product">
+            <div class="item">
+              <div class="img">
+                <a href=""><img src="image/âm thanh/0002225_loa-jbl-xtreme-3_420.jpeg" alt=""></a>
+              </div>
+              <div class="info">
+                <div class="info-main">
+                  <a href=""> Loa JBL Xtreme 3</a>
+                  <span>
+                    <strong>6.290.000₫
+                    </strong>
+                    <s>6.590.000₫</s>
+                   </span>
+                </div>
+                
+                   <div class="KM">
+                    <span class="bag">KM</span> <label title="Giảm tới 300.000đ khi thanh to&#225;n qua VNPAY (&#193;p dụng từ 01/04- 30/04)">Giảm tới 300.000đ khi thanh to&#225;n qu...</label>
+                        <strong class="text-orange">VÀ 8 KM KHÁC</strong>
+                   </div>
+                   <div class="promote">
+                    <ul>
+                      <li><span class="bag">KM</span> Giảm tới 300.000đ khi thanh to&#225;n qua VNPAY (&#193;p dụng từ 01/04- 30/04)</li>
+                      <li><span class="bag">KM</span> Giảm th&#234;m 1.2 Triệu khi mở thẻ TP Bank EVO th&#224;nh c&#244;ng</li>
+                      <li><span class="bag">KM</span> Thu cũ đổi mới l&#234;n đời Samsung Galaxy S23 Series: Trợ gi&#225; tới hơn 12 triệu</li>
+                      <li><span class="bag">KM</span> Dịch vụ ph&#242;ng chờ thương gia + Giảm 40% g&#243;i Bảo h&#224;nh Samsung Care+ 12 th&#225;ng gi&#225; c&#242;n 1.220.000đ</li>
+                      <li><span class="bag">KM</span> Thanh to&#225;n qua Moca tặng ngay đế sạc trị gi&#225; 320.000đ (Cho h&#243;a đơn c&#243; tổng gi&#225; trị từ 18 Triệu) - &#193;p dụng từ 01/04</li>
+                   </ul>
+                   </div>
+                </div>
+            </div>
+    
+            <div class="item">
+              <div class="img">
+                <a href=""><img src="image/âm thanh/0002249_loa-jbl-partyboxgo-black_420.jpeg" alt=""></a>
+              </div>
+              <div class="info">
+                <div class="info-main"> <a href="">Loa JBL PARTYBOXGO Black </a>
+                <span>
+                  <strong>7.900.000₫
+                </strong>
+                   <s>
+                    8.500.000₫</s>
+                   </span></div>
+               
+                   <div class="KM">
+                    <span class="bag">KM</span> <label title="Giảm tới 300.000đ khi thanh to&#225;n qua VNPAY (&#193;p dụng từ 01/04- 30/04)">Giảm tới 300.000đ khi thanh to&#225;n qu...</label>
+                        <strong class="text-orange">VÀ 8 KM KHÁC</strong>
+                   </div>
+                   <div class="promote">
+                    <ul>
+                      <li><span class="bag">KM</span> Giảm tới 300.000đ khi thanh to&#225;n qua VNPAY (&#193;p dụng từ 01/04- 30/04)</li>
+                      <li><span class="bag">KM</span> Giảm th&#234;m 1.2 Triệu khi mở thẻ TP Bank EVO th&#224;nh c&#244;ng</li>
+                      <li><span class="bag">KM</span> Thu cũ đổi mới l&#234;n đời Samsung Galaxy S23 Series: Trợ gi&#225; tới hơn 12 triệu</li>
+                      <li><span class="bag">KM</span> Dịch vụ ph&#242;ng chờ thương gia + Giảm 40% g&#243;i Bảo h&#224;nh Samsung Care+ 12 th&#225;ng gi&#225; c&#242;n 1.220.000đ</li>
+                      <li><span class="bag">KM</span> Thanh to&#225;n qua Moca tặng ngay đế sạc trị gi&#225; 320.000đ (Cho h&#243;a đơn c&#243; tổng gi&#225; trị từ 18 Triệu) - &#193;p dụng từ 01/04</li>
+                      
+                   </ul>
+                   </div>
+                </div>
+            </div>
+            <div class="item">
+              <div class="img">
+                <a href=""><img src="image/âm thanh/0002263_loa-jbl-partybox-100_420.jpeg" alt=""></a>
+              </div>
+              <div class="info">
+                <div class="info-main"><a href=""> Loa JBL PartyBox 100 </a>
+                <span>
+                  <strong>8.500.000₫
+                  </strong>
+                   <s>9.500.000₫</s>
+                   </span></div>
+                
+                   <div class="KM">
+                    <span class="bag">KM</span> <label title="Giảm tới 300.000đ khi thanh to&#225;n qua VNPAY (&#193;p dụng từ 01/04- 30/04)">Giảm tới 300.000đ khi thanh to&#225;n qu...</label>
+                        <strong class="text-orange">VÀ 8 KM KHÁC</strong>
+                   </div>
+                   <div class="promote">
+                    <ul>
+                      <li><span class="bag">KM</span> Giảm tới 300.000đ khi thanh to&#225;n qua VNPAY (&#193;p dụng từ 01/04- 30/04)</li>
+                      <li><span class="bag">KM</span> Giảm th&#234;m 1.2 Triệu khi mở thẻ TP Bank EVO th&#224;nh c&#244;ng</li>
+                      <li><span class="bag">KM</span> Thu cũ đổi mới l&#234;n đời Samsung Galaxy S23 Series: Trợ gi&#225; tới hơn 12 triệu</li>
+                      <li><span class="bag">KM</span> Dịch vụ ph&#242;ng chờ thương gia + Giảm 40% g&#243;i Bảo h&#224;nh Samsung Care+ 12 th&#225;ng gi&#225; c&#242;n 1.220.000đ</li>
+                      <li><span class="bag">KM</span> Thanh to&#225;n qua Moca tặng ngay đế sạc trị gi&#225; 320.000đ (Cho h&#243;a đơn c&#243; tổng gi&#225; trị từ 18 Triệu) - &#193;p dụng từ 01/04</li>
+                      
+                   </ul>
+                   </div>
+                </div>
+            </div>
+            <div class="item">
+              <div class="img">
+                <a href=""><img src="image/âm thanh/airpods-max_420.webp" alt=""></a>
+              </div>
+              <div class="info">
+                <div class="info-main"><a href=""> AirPods Max</a>
+                <span>
+                  <strong> 12.590.000₫
+                </strong>
+                   <s>13.990.000₫</s>
+                   </span></div>
+                
+                   <div class="KM">
+                    <span class="bag">KM</span> <label title="Giảm tới 300.000đ khi thanh to&#225;n qua VNPAY (&#193;p dụng từ 01/04- 30/04)">Giảm tới 300.000đ khi thanh to&#225;n qu...</label>
+                        <strong class="text-orange">VÀ 8 KM KHÁC</strong>
+                   </div>
+                   <div class="promote">
+                    <ul>
+                      <li><span class="bag">KM</span> Giảm tới 300.000đ khi thanh to&#225;n qua VNPAY (&#193;p dụng từ 01/04- 30/04)</li>
+                      <li><span class="bag">KM</span> Giảm th&#234;m 1.2 Triệu khi mở thẻ TP Bank EVO th&#224;nh c&#244;ng</li>
+                      <li><span class="bag">KM</span> Thu cũ đổi mới l&#234;n đời Samsung Galaxy S23 Series: Trợ gi&#225; tới hơn 12 triệu</li>
+                      <li><span class="bag">KM</span> Dịch vụ ph&#242;ng chờ thương gia + Giảm 40% g&#243;i Bảo h&#224;nh Samsung Care+ 12 th&#225;ng gi&#225; c&#242;n 1.220.000đ</li>
+                      <li><span class="bag">KM</span> Thanh to&#225;n qua Moca tặng ngay đế sạc trị gi&#225; 320.000đ (Cho h&#243;a đơn c&#243; tổng gi&#225; trị từ 18 Triệu) - &#193;p dụng từ 01/04</li>
+                      
+                   </ul>
+                   </div>
+                </div>
+            </div>
+  
+          </div>
+     </div>
+    </div>
+  </section>
+<!-- email -->
+<section>
+    <div class="container">
+        <div class="subscript">
+            <div class="icon-text">
+                <div class="text">
+                    <h3>Đăng ký nhận tin</h3>
+                    <p>Đăng ký để nhận những chương trình khuyến mại hot nhất của Phone Sờ To</p>
+                </div>
+            </div>
+            <div class="form">
+                <form onsubmit="return submitSubscription(this);">
+                    <input name="__RequestVerificationToken" type="hidden" value="6QhQeeyNud4u93WVC60kqb-yMeXNL6b91HO5_0exeVY2dC8JjuieqDQ7dm-y31PeMlcOyMRVGaFrklgaBj-fr4I-_vg1" />
+                    <div class="input">
+                        <input type="email" id="email" name="email" placeholder="Nhập E-mail của bạn" />
+                    </div>
+                    <button type="submit"><ion-icon class="fa-solid" name="paper-plane"></ion-icon></button>
+                </form>
+            </div>
+        </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="footer">
+    <div class="footer-top">
+      <div class="footer-top-1">
+        <a href=""> <img src="img/taosoto.png" alt=""></a>
+        <p>Năm 2020, Táo Sờ To trở thành đại lý ủy quyền của Apple. Chúng tôi phát triển chuỗi cửa hàng tiêu chuẩn và Apple Mono Store nhằm mang đến trải nghiệm tốt nhất về sản phẩm và dịch vụ của Apple cho người dùng Việt Nam.</p>
+        <div class="footer-info">
+          <a href=""><img src="img/Face.png" alt=""></a>
+          <a href=""><img src="img/Tiktok.png" alt=""></a>
+          <a href=""><img src="img/Zalo.png" alt=""></a>
+          <a href=""><img src="img/Youtube.png" alt=""></a>
+          
+        </div>
+      </div>
+      <div class="footer-top-2">
+        <div class="footer-title">
+          <strong>Thông tin</strong>
+        </div>
+        <ul> 
+          <li><a href="">Tin tức</a></li>
+          <li><a href="">Giới thiệu</a></li>
+          <li><a href="">Check IMEI</a></li>
+          <li><a href="">Phương thức thanh toán</a></li>
+          <li><a href="">Bảo hành và sửa chữa</a></li>
+          <li><a href="">Tuyển dụng</a></li>
+          <li><a href="">Đánh giá chất lượng, khiểu nại</a></li>
+
+        </ul>
+      </div>
+      <div class="footer-top-3">
+        <div class="footer-title">
+          <strong>Chính sách</strong>
+        </div>
+        <ul> 
+          <li><a href="">Thu cũ đổi mới</a></li>
+          <li><a href="">Giao hàng</a></li>
+          <li><a href="">Huỷ dịch vụ</a></li>
+          <li><a href="">Đổi trả</a></li>
+          <li><a href="">Bảo hành</a></li>
+          <li><a href="">Bảo mật thông tin</a></li>
+          <li><a href="">Giải quyết khiểu nại</a></li>
+          <li><a href="">Trả góp</a></li>
+
+        </ul>
+      </div>
+      <div class="footer-top-4">
+        <div class="footer-title">
+          <strong>Địa chỉ & Liên hệ</strong>
+          <ul>
+            <li><a href="">Tài khoản của tôi</a></li>
+            <li><a href="">Đơn đặt hàng</a></li>
+            <li><a href="">Tìm kiếm Store trên Google Map</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2016 Công ty Cổ Phần HESMAN Việt Nam GPDKKD: 0107465657 do Sở KH & ĐT TP. Hà Nội cấp ngày 08/06/2016.
+        Địa chỉ: Số 76 Thái Hà, phường Trung Liệt, quận Đống Đa, thành phố Hà Nội, Việt Nam
+        Đại diện pháp luật: PHẠM MẠNH HÒA | ĐT: 0247.305.9999 | Email: lienhe@shopdunk.com</span>
+      <a href=""><img src="img/Bocongthuong.png" alt=""></a>
+    </div>
+  </div>
+</footer>
+</body>
+<script src="js.js">
+</script>
+</html>

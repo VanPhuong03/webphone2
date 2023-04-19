@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>Táo sờ to-Dịch vụ</title>
+</head>
+<body>
+  <header>
+    <div class="heading">
+      <div class="main-search">
+        <div class="search-box">
+          <form method="get" action="/tim-kiem" onsubmit="return submitSearch(this);" enctype="application/x-www-form-urlencoded">
+              <div class="border">
+                  <input type="text" id="search-box" name="kwd" placeholder="Hôm nay bạn cần tìm gì?" />
+                  <ion-icon style="color: aliceblue; font-size: 30px;" class="fa-solid" name="close-circle" onclick="exitSearchBox()"></ion-icon>
+              </div>
+          </form>
+        </div>
+      </div>
+        <div class="container">
+         <!--logo-->
+         <div class="menu-bar">
+          <ion-icon class="menu-open" name="menu-outline" onclick="openMenu()"></ion-icon>
+              <ion-icon style="display: none;" class="menu-close" name="close-outline"  onclick="closeMenu()"></ion-icon>
+         </div>
+         <div class="logo">
+            <a href="index.html">
+              <img src="img/taosoto.png" alt="">
+            </a>
+            <!-- <a href=""><img style="width: 200px;height: 50px;" src="logo-táo.png" alt=""></a> -->
+          </div>
+          <div class="menu">
+            <ul>
+                <li> <a href="index-iphone.html"><span>Iphone</span></a></li>
+                <li> <a href="index-ipad.html"><span>iPad</span></a></li>
+                <li> <a href="index-mac.html"><span>Mac</span></a></li>
+                <li> <a href="index-watch.html"><span>Wacth</span></a></li>
+                <li> <a href="index-sound.html"><span>Âm thanh</span></a></li>
+                <li> <a href="index-accessory.html"><span>Phụ kiện</span></a></li>
+                <li> <a href="index-service.html"><span>Dịch vụ </span></a></li>
+                <li> <a href="index-promotion.html"><span>Ưu đãi</span></a></li>
+            </ul>
+          </div>
+         <div class="header-right">
+            <!--search box-->
+            <ion-icon class="fa-solid " name="search-outline"  onclick="showSearchBox()"></ion-icon>
+         <div class="gioihang">
+            <a href="index-cart.html">
+              <ion-icon class="fa-solid fa" name="cart-outline"></ion-icon>
+            </a>
+          </div>
+          <div class="tracuu">
+            <a href="index-login.html">
+              <ion-icon class="fa-solid " name="person-add-outline"></ion-icon>
+            </a>
+            <div  class="menu-user">
+              <div class="menu-user-1">
+                <ul>
+                  <li><a href="index-user.html"> Tạo tài khoản ngay</a></li>
+                  <li><a href="index-login.html"> Đăng nhập</a></li>
+                  <li><a href="index-service.html"> Dịch vụ</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="menu-bottom">
+            <ul>
+                <li> <a href="index-iphone.html"><span>Iphone</span></a></li>
+                <li> <a href="index-ipad.html"><span>iPad</span></a></li>
+                <li> <a href="index-mac.html"><span>Mac</span></a></li>
+                <li> <a href="index-watch.html"><span>Wacth</span></a></li>
+                <li> <a href="index-sound.html"><span>Âm thanh</span></a></li>
+                <li> <a href="index-accessory.html"><span>Phụ kiện</span></a></li>
+                <!-- <li> <a href=""><span>Trả góp</span></a></li>
+                <li> <a href=""><span>Ưu đãi</span></a></li> -->
+            </ul>
+        </div>
+        <div style="display: none;" class="menu-bar-mobile">
+          <div class="menu-bar-mobile-1">
+            <ul>
+              <li><a href="index-user.html">Tạo tài khoản ngay</a></li>
+              <li><a href="index-login.html">Đăng nhập</a></li>
+              <li><a href="index-service.html">Dịch vụ</a></li>
+              <li><a href="">Ưu đãi</a></li>
+            </ul>
+          </div>
+        </div>
+    </div>
+    
+</header>
+<main >
+  <div class="page">
+      <div class="container">
+        <div class="page-exit">
+          <ul>
+            <li><a href="index.html"> Trang chủ</a></li>
+            <li><span>></span></li>
+            <li>Khuyến mãi</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+<section>
+    <div style="font-weight: bold;font-size: 50px;color: red;text-align: center;padding: 50px;" class="promotion">
+        <p><ion-icon name="sad-outline"></ion-icon>Chưa có làm <ion-icon name="sad-outline"></ion-icon></p>
+    </div>
+</section>
+<!-- email -->
+<section>
+    <div class="container">
+        <div class="subscript">
+            <div class="icon-text">
+                <div class="text">
+                    <h3>Đăng ký nhận tin</h3>
+                    <p>Đăng ký để nhận những chương trình khuyến mại hot nhất của Phone Sờ To</p>
+                </div>
+            </div>
+            <div class="form">
+                <form onsubmit="return submitSubscription(this);">
+                    <input name="__RequestVerificationToken" type="hidden" value="6QhQeeyNud4u93WVC60kqb-yMeXNL6b91HO5_0exeVY2dC8JjuieqDQ7dm-y31PeMlcOyMRVGaFrklgaBj-fr4I-_vg1" />
+                    <div class="input">
+                        <input type="email" id="email" name="email" placeholder="Nhập E-mail của bạn" />
+                    </div>
+                    <button type="submit"><ion-icon class="fa-solid" name="paper-plane"></ion-icon></button>
+                </form>
+            </div>
+        </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="footer">
+    <div class="footer-top">
+      <div class="footer-top-1">
+        <a href=""> <img src="img/taosoto.png" alt=""></a>
+        <p>Năm 2020, Táo Sờ To trở thành đại lý ủy quyền của Apple. Chúng tôi phát triển chuỗi cửa hàng tiêu chuẩn và Apple Mono Store nhằm mang đến trải nghiệm tốt nhất về sản phẩm và dịch vụ của Apple cho người dùng Việt Nam.</p>
+        <div class="footer-info">
+          <a href=""><img src="img/Face.png" alt=""></a>
+          <a href=""><img src="img/Tiktok.png" alt=""></a>
+          <a href=""><img src="img/Zalo.png" alt=""></a>
+          <a href=""><img src="img/Youtube.png" alt=""></a>
+          
+        </div>
+      </div>
+      <div class="footer-top-2">
+        <div class="footer-title">
+          <strong>Thông tin</strong>
+        </div>
+        <ul> 
+          <li><a href="">Tin tức</a></li>
+          <li><a href="">Giới thiệu</a></li>
+          <li><a href="">Check IMEI</a></li>
+          <li><a href="">Phương thức thanh toán</a></li>
+          <li><a href="">Bảo hành và sửa chữa</a></li>
+          <li><a href="">Tuyển dụng</a></li>
+          <li><a href="">Đánh giá chất lượng, khiểu nại</a></li>
+
+        </ul>
+      </div>
+      <div class="footer-top-3">
+        <div class="footer-title">
+          <strong>Chính sách</strong>
+        </div>
+        <ul> 
+          <li><a href="">Thu cũ đổi mới</a></li>
+          <li><a href="">Giao hàng</a></li>
+          <li><a href="">Huỷ dịch vụ</a></li>
+          <li><a href="">Đổi trả</a></li>
+          <li><a href="">Bảo hành</a></li>
+          <li><a href="">Bảo mật thông tin</a></li>
+          <li><a href="">Giải quyết khiểu nại</a></li>
+          <li><a href="">Trả góp</a></li>
+
+        </ul>
+      </div>
+      <div class="footer-top-4">
+        <div class="footer-title">
+          <strong>Địa chỉ & Liên hệ</strong>
+          <ul>
+            <li><a href="">Tài khoản của tôi</a></li>
+            <li><a href="">Đơn đặt hàng</a></li>
+            <li><a href="">Tìm kiếm Store trên Google Map</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2016 Công ty Cổ Phần HESMAN Việt Nam GPDKKD: 0107465657 do Sở KH & ĐT TP. Hà Nội cấp ngày 08/06/2016.
+        Địa chỉ: Số 76 Thái Hà, phường Trung Liệt, quận Đống Đa, thành phố Hà Nội, Việt Nam
+        Đại diện pháp luật: PHẠM MẠNH HÒA | ĐT: 0247.305.9999 | Email: lienhe@shopdunk.com</span>
+      <a href=""><img src="img/Bocongthuong.png" alt=""></a>
+    </div>
+  </div>
+</footer>
+</body>
+<script src="js.js">
+</script>
+</html>

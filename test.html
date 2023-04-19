@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+ .blink {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    color: rgb(255, 0, 0);
+  }
+  100% {
+    color: rgb(235, 18, 119);
+  }
+}
+.blink-bg {
+  background: linear-gradient(to right, red, blue);
+  background-size: 200% 100%;
+  animation: blinker 2s linear infinite;
+}
+
+@keyframes blinker {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+
+
+  </style>
+</head>
+<body>
+  <h6 class="blink">New</h6>
+  
+  <div style="height: 200px;" class="blink-bg">Hello World</div>
+
+</body>
+</html>
